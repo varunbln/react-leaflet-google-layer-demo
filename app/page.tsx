@@ -1,11 +1,5 @@
-"use client";
+import RedirectComponent from "../components/RedirectComponent";
+
 export default function Home() {
-  const redirectToMap = () => {
-    window.location.href = "/map";
-  };
-  return (
-    <button onClick={redirectToMap} className="underline">
-      Click here
-    </button>
-  );
+  return <RedirectComponent />;
 }
