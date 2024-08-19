@@ -1,14 +1,11 @@
 "use client";
-import dynamic from "next/dynamic";
-
-const Map = dynamic(() => import("@/components/Map"), {
-  ssr: false,
-});
-
 export default function Home() {
+  const redirectToMap = () => {
+    window.location.href = "/map";
+  };
   return (
-    <>
-      <Map />
-    </>
+    <button onClick={redirectToMap} className="underline">
+      Click here
+    </button>
   );
 }
