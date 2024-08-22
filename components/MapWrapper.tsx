@@ -5,7 +5,7 @@ const Map = dynamic(() => import("@/components/Map"), {
   ssr: false,
 });
 
-export default function MapWrapper() {
+export default function MapWrapper({ country }: { country: string | null }) {
   return (
     <>
       <Map />
