@@ -1,6 +1,5 @@
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-import ReactLeafletGoogleLayer from "react-leaflet-google-layer";
 
 const Map = () => {
   return (
@@ -11,9 +10,9 @@ const Map = () => {
         scrollWheelZoom={true}
         style={{ width: "100vw", height: "100vh" }}
       >
-        <ReactLeafletGoogleLayer
-          type="hybrid"
-          apiKey="AIzaSyCyQtqLWjG5qYbwxLNjKoXZFci0nC5poaA"
+        <TileLayer
+          url={`https://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}&scale=2&hl=en&gl=US&AIzaSyCyQtqLWjG5qYbwxLNjKoXZFci0nC5poaA`}
+          subdomains={["mt0", "mt1", "mt2", "mt3"]}
         />
       </MapContainer>
     </>
